@@ -35,7 +35,7 @@ class Post(models.Model):
     title = models.CharField(max_length = 40)
     text = models.TextField()
     uploaded_on = models.DateTimeField(default = timezone.now)
-    category = models.ForeignKey("Post",related_name = 'posts',on_delete = models.CASCADE)
+    category = models.ForeignKey("Category",related_name = 'posts',on_delete = models.CASCADE)
 
     def __str__(self) -> str:
         return self.title
@@ -46,4 +46,4 @@ class PostImage(models.Model):
     photo = models.ImageField(upload_to = post_image_path)
 
     def __str__(self) -> str:
-        return self.post
+        return f"{self.post}"
