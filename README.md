@@ -13,5 +13,6 @@ STEPS TO SETUP THE PROJECT:-
 8) Migrate to database - python manage.py migrate
 9) Create a superuser - python manage.py createsuperuser
 10) Run Local server - python manage.py runserver
+
 ---------------> ENJOY!! <----------------
 
