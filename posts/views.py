@@ -21,7 +21,7 @@ class CategoryListAPI(generics.ListAPIView):
     def get_queryset(self):
         if "college_static_id" not in self.request.query_params:
             raise ValidationError("COLLEGE ID NOT PROVIDED")
-        college = College.objects.filter(static_id = "college_static_id")
+        college = College.objects.filter(static_id = self.request.query_params["college_static_id"])
         if college.exists():
             college = college.first()
             return Category.objects.filter(college=college)
@@ -36,7 +36,7 @@ class PostListAPI(generics.ListAPIView):
     def get_queryset(self):
         if "category_static_id" not in self.request.query_params:
             raise ValidationError("CATEGORY ID NOT PROVIDED")
-        category = Category.objects.filter(static_id = "category_static_id")
+        category = Category.objects.filter(static_id = self.request.query_params["category_static_id"])
         if category.exists():
             category = category.first()
             return Post.objects.filter(category=category)
@@ -46,7 +46,7 @@ class PostListAPI(generics.ListAPIView):
 
     def list(self,request,*args, **kwargs):
         try:
-            super().list(request,*args, **kwargs)
+            return super().list(request,*args, **kwargs)
         except ValidationError as e:
             return Response({"message":str(e)})
 

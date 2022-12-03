@@ -19,6 +19,6 @@ from django.urls import path,include
 from posts.urls import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('post/', include("posts.urls")),
+    path('admin/LibraryAdmin/', admin.site.urls),
+    path('', include("posts.urls")),
 ]
