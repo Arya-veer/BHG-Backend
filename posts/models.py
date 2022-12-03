@@ -3,21 +3,26 @@ from django.utils import timezone
 from uuid import uuid4
 
 # Create your models here.
-
+def college_image_path(instance,filename):
+    return f"{instance.name}/banner.{filename.split('.')[-1]}"
 
 class College(models.Model):
 
     static_id = models.UUIDField(default = uuid4,editable = False,unique = True)
     name = models.CharField("Name of the college",max_length = 50)
+    col_img = models.ImageField(upload_to=college_image_path,null=True)
 
     def __str__(self) -> str:
-        return f"{self.name}"
+        return f"{self.name}" 
 
+def category_image_path(instance,filename):
+    return f"{instance.college.name}/{instance.name}/banner.{filename.split('.')[-1]}"
 class Category(models.Model):
 
     static_id = models.UUIDField(default = uuid4,editable = False,unique = True)
     name = models.CharField(max_length = 30)
     college = models.ForeignKey("College",related_name = "categories",on_delete = models.CASCADE)
+    categ_img = models.ImageField(upload_to=category_image_path,null=True)
 
     class Meta:
         verbose_name_plural = "Categories"
