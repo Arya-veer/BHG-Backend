@@ -28,7 +28,10 @@ SECRET_KEY = 'django-insecure-fhoc#9y7dwonb)-&@4aox^g$3x6zk+o)-l&no^i5wjo-npjhqo
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+# CORS_ALLOWED_ORIGINS = [
+#     "http://"
+# ]
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -41,11 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'posts',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
