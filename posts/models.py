@@ -11,7 +11,7 @@ def college_image_path_2(instance,filename):
 
 class College(models.Model):
 
-    static_id = models.UUIDField(default = uuid4,editable = False,unique = True)
+    static_id = models.UUIDField(default = uuid4,unique = True)
     name = models.CharField("Name of the college",max_length = 50)
     title = models.CharField("Title of the college",max_length = 50,blank=True)
     description = models.TextField(blank=True)
@@ -26,7 +26,7 @@ def category_image_path(instance,filename):
     return f"{instance.college.name}/{instance.name}/banner.{filename.split('.')[-1]}"
 class Category(models.Model):
 
-    static_id = models.UUIDField(default = uuid4,editable = False,unique = True)
+    static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
     name = models.CharField(max_length = 30)
     college = models.ForeignKey("College",related_name = "categories",on_delete = models.CASCADE)
     categ_img = models.ImageField(upload_to=category_image_path,null=True)
@@ -40,7 +40,7 @@ class Category(models.Model):
 
 class Post(models.Model):
 
-    static_id = models.UUIDField(default = uuid4,editable = False,unique = True)
+    static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
     title = models.CharField(max_length = 40,blank = True)
     text = models.TextField(blank = True)
     uploaded_on = models.DateTimeField(default = timezone.now)
