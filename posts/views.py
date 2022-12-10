@@ -53,3 +53,24 @@ class PostListAPI(generics.ListAPIView):
         except ValidationError as e:
             return Response({"message":str(e)})
 
+class PostImageListAPI(generics.ListAPIView):
+    permission_classes = (AllowAny,)
+    serializer_class = PostImagesSerializer
+    
+    def get_queryset(self):
+        if "post_static_id" not in self.request.query_params:
+            raise ValidationError("POST ID NOT PROVIDED")
+        post = Post.objects.filter(static_id = self.request.query_params["post_static_id"])
+        if post.exists():
+            post = post.first()
+            return PostImage.objects.filter(post=post)
+        else:
+            raise ValidationError("INVALID POST ID GIVEN")
+
+
+    def list(self,request,*args, **kwargs):
+        try:
+            return super().list(request,*args, **kwargs)
+        except ValidationError as e:
+            return Response({"message":str(e)})
+
