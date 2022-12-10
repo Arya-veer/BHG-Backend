@@ -24,7 +24,10 @@ class CategoryListAPI(generics.ListAPIView):
         college = College.objects.filter(static_id = self.request.query_params["college_static_id"])
         if college.exists():
             college = college.first()
-            return Category.objects.filter(college=college)
+            category = Category.objects.filter(college=college)
+            category = category.exclude(name = "GoodImages")
+
+            return category
         else:
             raise ValidationError("INVALID COLLEGE ID GIVEN")
 
@@ -49,5 +52,4 @@ class PostListAPI(generics.ListAPIView):
             return super().list(request,*args, **kwargs)
         except ValidationError as e:
             return Response({"message":str(e)})
-
 

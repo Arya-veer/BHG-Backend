@@ -6,11 +6,18 @@ from uuid import uuid4
 def college_image_path(instance,filename):
     return f"{instance.name}/banner.{filename.split('.')[-1]}"
 
+def college_image_path_2(instance,filename):
+    return f"{instance.name}/banner_2.{filename.split('.')[-1]}"
+
 class College(models.Model):
 
     static_id = models.UUIDField(default = uuid4,editable = False,unique = True)
     name = models.CharField("Name of the college",max_length = 50)
-    col_img = models.ImageField(upload_to=college_image_path,null=True)
+    title = models.CharField("Title of the college",max_length = 50,blank=True)
+    description = models.TextField(blank=True)
+    col_img1 = models.ImageField(upload_to=college_image_path,null=True)
+    col_img2 = models.ImageField(upload_to=college_image_path_2,null=True)
+
 
     def __str__(self) -> str:
         return f"{self.name}" 
