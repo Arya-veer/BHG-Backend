@@ -15,7 +15,7 @@ class College(models.Model):
     name = models.CharField("Name of the college",max_length = 50)
     title = models.CharField("Title of the college",max_length = 50,blank=True)
     description = models.TextField(blank=True)
-    col_img1 = models.ImageField(upload_to=college_image_path,null=True)
+    col_img = models.ImageField(upload_to=college_image_path,null=True)
     col_img2 = models.ImageField(upload_to=college_image_path_2,null=True)
 
 
