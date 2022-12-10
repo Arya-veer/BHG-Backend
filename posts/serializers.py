@@ -27,7 +27,7 @@ class PostListSerializer(serializers.ModelSerializer):
         fields = ('static_id','title','text','photo')
 
     def get_photo(self,obj):
-        serializer = PostImagesSerializer(PostImage.objects.filter(post = obj).first().photo.url)
+        serializer = PostImagesSerializer(PostImage.objects.filter(post = obj).first())
         return serializer.data
 
 class PostImageListSerializer(PostListSerializer):
