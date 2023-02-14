@@ -17,18 +17,18 @@ class PostImagesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PostImage
-        fields = ('photo',)
+        fields = ('photo','caption')
 
 class PostListSerializer(serializers.ModelSerializer):
-    photo = serializers.SerializerMethodField()
+    images = PostImagesSerializer()
 
     class Meta:
         model = Post
-        fields = ('static_id','title','text','photo')
+        fields = ('static_id','title','text','images')
 
-    def get_photo(self,obj):
-        serializer = PostImagesSerializer(PostImage.objects.filter(post = obj).first())
-        return serializer.data
+    # def get_photo(self,obj):
+    #     serializer = PostImagesSerializer(PostImage.objects.filter(post = obj).first())
+    #     return serializer.data
 
 class PostImageListSerializer(PostListSerializer):
     images = PostImagesSerializer(many = True)

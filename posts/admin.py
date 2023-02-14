@@ -13,7 +13,7 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(PostImage)
 class PostImageAdmin(admin.ModelAdmin):
-    list_display = ('post','category','college')
+    list_display = ('post','category','college','caption')
     list_filter = ('post','post__category','post__category__college')
 
     def category(self,obj):

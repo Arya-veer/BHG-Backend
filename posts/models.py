@@ -59,6 +59,7 @@ class PostImage(models.Model):
 
     post = models.ForeignKey('Post',related_name = 'images',on_delete = models.CASCADE)
     photo = models.ImageField(upload_to = post_image_path)
+    caption = models.TextField(blank=True,null=True)
 
     def __str__(self) -> str:
         return f"{self.post}"
