@@ -3,6 +3,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
 from rest_framework.views import APIView
+from rest_framework import status
 
 from .models import *
 from .serializers import *
@@ -99,4 +100,11 @@ class VideoListAPI(generics.ListAPIView):
         except ValidationError as e:
             return Response({"message":str(e)})
 
-class AboutAPI(APIView)
+class AboutAPI(APIView):
+
+    def get(self,request):
+        try:
+            about = Misc.objects.first().about
+            return Response({"about":about},status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({"message":str(e)})
