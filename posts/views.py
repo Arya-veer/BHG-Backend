@@ -81,6 +81,7 @@ class BookListAPI(generics.ListAPIView):
 
     permission_classes = (AllowAny,)
     serializer_class = BookListSerializer
+    queryset = Book.objects.all()
 
     def list(self,request,*args, **kwargs):
         try:
@@ -93,6 +94,7 @@ class VideoListAPI(generics.ListAPIView):
 
     permission_classes = (AllowAny,)
     serializer_class = VideoListSerializer
+    queryset = Video.objects.all()
 
     def list(self,request,*args, **kwargs):
         try:
@@ -100,11 +102,13 @@ class VideoListAPI(generics.ListAPIView):
         except ValidationError as e:
             return Response({"message":str(e)})
 
-class AboutAPI(APIView):
+class FrontPageAPI(generics.ListAPIView):
 
-    def get(self,request):
+    queryset = FrontPage.objects.all()
+    
+    def list(self,request,*args, **kwargs):
         try:
-            about = Misc.objects.first().about
-            return Response({"about":about},status=status.HTTP_200_OK)
-        except Exception as e:
+            return super().list(request,*args, **kwargs)
+        except ValidationError as e:
             return Response({"message":str(e)})
+        

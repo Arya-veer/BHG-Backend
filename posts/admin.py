@@ -7,7 +7,7 @@ admin.site.register(Category)
 # admin.site.register(PostImage)
 admin.site.register(Book)
 admin.site.register(Video)
-admin.site.register(Misc)
+admin.site.register(FrontPage)
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):

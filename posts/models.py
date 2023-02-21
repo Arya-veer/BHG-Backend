@@ -88,6 +88,18 @@ class Video(models.Model):
     def __str__(self) -> str:
         return self.title
 
-class Misc(models.Model):
 
+def cover_image(instance,filename):
+    return f"cover_image/filename"
+
+
+
+class FrontPage(models.Model):
+
+    cover_title = models.TextField(null=True,blank=True)
+    cover_desc = models.TextField(null=True,blank=True)
+    cover_image = models.ImageField(upload_to=cover_image)
     about = models.TextField(null=True,blank=True)
+
+    def __str__(self) -> str:
+        return self.about

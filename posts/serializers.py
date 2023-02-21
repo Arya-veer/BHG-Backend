@@ -45,3 +45,9 @@ class VideoListSerializer(serializers.ModelSerializer):
         model = Video
         fields = '__all__'
 
+class FrontPageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = FrontPage
+        fields = '__all__'
+

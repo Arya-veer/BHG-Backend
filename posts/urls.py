@@ -8,5 +8,5 @@ urlpatterns = [
     path("post_images/",PostImageListAPI.as_view()),
     path('books/', BookListAPI.as_view()),
     path('videos/', VideoListAPI.as_view()),
-    path('about/', AboutAPI.as_view()),
+    path('front/', FrontPageAPI.as_view()),
 ]
