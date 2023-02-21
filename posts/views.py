@@ -2,6 +2,7 @@ from rest_framework import generics
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
+from rest_framework.views import APIView
 
 from .models import *
 from .serializers import *
@@ -74,3 +75,28 @@ class PostImageListAPI(generics.ListAPIView):
         except ValidationError as e:
             return Response({"message":str(e)})
 
+
+class BookListAPI(generics.ListAPIView):
+
+    permission_classes = (AllowAny,)
+    serializer_class = BookListSerializer
+
+    def list(self,request,*args, **kwargs):
+        try:
+            return super().list(request,*args, **kwargs)
+        except ValidationError as e:
+            return Response({"message":str(e)})
+
+
+class VideoListAPI(generics.ListAPIView):
+
+    permission_classes = (AllowAny,)
+    serializer_class = VideoListSerializer
+
+    def list(self,request,*args, **kwargs):
+        try:
+            return super().list(request,*args, **kwargs)
+        except ValidationError as e:
+            return Response({"message":str(e)})
+
+class AboutAPI(APIView)
