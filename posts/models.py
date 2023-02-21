@@ -51,6 +51,8 @@ class Post(models.Model):
 
 def post_image_path(instance,filename):
     return f"{instance.post.category.college.name}/{instance.post.category.name}/{instance.post.title}/{filename}"
+
+
 class PostImage(models.Model):
 
     """
@@ -63,3 +65,29 @@ class PostImage(models.Model):
 
     def __str__(self) -> str:
         return f"{self.post}"
+
+def book_path(instance,filename):
+    return f"books/{instance.title}"
+class Book(models.Model):
+
+    static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
+    title = models.CharField(max_length = 40,blank = True)
+    description = models.TextField(blank=True,null=True)
+    bookFile = models.FileField(upload_to=book_path)
+    author = models.TextField(null=True,blank=True)
+
+    def __str__(self):
+        return self.title
+
+class Video(models.Model):
+
+    static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
+    title = models.CharField(max_length = 40,blank = True)
+    link = models.URLField(max_length = 200)
+
+    def __str__(self) -> str:
+        return self.title
+
+class Misc(models.Model):
+
+    about = models.TextField(null=True,blank=True)

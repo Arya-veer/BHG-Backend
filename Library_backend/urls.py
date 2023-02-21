@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path,include
 
 from posts.urls import *
-
+admin.site.site_header = 'Birla Heritage Gallery'
+admin.site.site_title = 'Birla Heritage Gallery'
 urlpatterns = [
     path('admin/LibraryAdmin/', admin.site.urls),
     path('', include("posts.urls")),

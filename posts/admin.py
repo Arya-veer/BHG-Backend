@@ -5,6 +5,9 @@ admin.site.register(College)
 # admin.site.register(Post)
 admin.site.register(Category)
 # admin.site.register(PostImage)
+admin.site.register(Book)
+admin.site.register(Video)
+admin.site.register(Misc)
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
@@ -21,3 +24,5 @@ class PostImageAdmin(admin.ModelAdmin):
 
     def college(self,obj):
         return obj.post.category.college    
+
+
