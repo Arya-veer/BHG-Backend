@@ -104,6 +104,8 @@ class VideoListAPI(generics.ListAPIView):
 
 class FrontPageAPI(generics.ListAPIView):
 
+    permission_classes = (AllowAny,)
+    serializer_class = FrontPageSerializer
     queryset = FrontPage.objects.all()
     
     def list(self,request,*args, **kwargs):
