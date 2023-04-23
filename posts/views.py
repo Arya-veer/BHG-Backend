@@ -102,15 +102,16 @@ class VideoListAPI(generics.ListAPIView):
         except Exception as e:
             return Response({"message":str(e)})
 
-class FrontPageAPI(generics.ListAPIView):
+class FrontPageAPI(generics.RetrieveAPIView):
 
     permission_classes = (AllowAny,)
     serializer_class = FrontPageSerializer
-    queryset = FrontPage.objects.all()
+    def get_object(self):
+        return FrontPage.objects.all().first()
     
-    def list(self,request,*args, **kwargs):
+    def retrieve(self, request, *args, **kwargs):
         try:
-            return super().list(request,*args, **kwargs)
+            return super().retrieve(request, *args, **kwargs)
         except Exception as e:
             return Response({"message":str(e)})
         
