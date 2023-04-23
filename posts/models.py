@@ -90,16 +90,21 @@ class Video(models.Model):
 
 
 def cover_image(instance,filename):
-    return f"cover_image/filename"
-
+    return f"cover_image/{filename}"
 
 
 class FrontPage(models.Model):
 
     cover_title = models.TextField(null=True,blank=True)
+    cover_subheading = models.TextField(null=True,blank=True)
+    gallery_content = models.TextField(null=True,blank=True)
     cover_desc = models.TextField(null=True,blank=True)
     cover_image = models.ImageField(upload_to=cover_image)
     about = models.TextField(null=True,blank=True)
+    gallery_image1 = models.ImageField(upload_to=cover_image)
+    gallery_image2 = models.ImageField(upload_to=cover_image)
+    gallery_image3 = models.ImageField(upload_to=cover_image)
+
 
     def __str__(self) -> str:
         return self.about

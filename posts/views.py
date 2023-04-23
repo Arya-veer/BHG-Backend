@@ -86,7 +86,7 @@ class BookListAPI(generics.ListAPIView):
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
-        except ValidationError as e:
+        except Exception as e:
             return Response({"message":str(e)})
 
 
@@ -99,7 +99,7 @@ class VideoListAPI(generics.ListAPIView):
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
-        except ValidationError as e:
+        except Exception as e:
             return Response({"message":str(e)})
 
 class FrontPageAPI(generics.ListAPIView):
@@ -111,6 +111,6 @@ class FrontPageAPI(generics.ListAPIView):
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
-        except ValidationError as e:
+        except Exception as e:
             return Response({"message":str(e)})
         
