@@ -99,11 +99,11 @@ class FrontPage(models.Model):
     cover_subheading = models.TextField(null=True,blank=True)
     gallery_content = models.TextField(null=True,blank=True)
     cover_desc = models.TextField(null=True,blank=True)
-    cover_image = models.ImageField(upload_to=cover_image)
+    cover_image = models.ImageField(upload_to=cover_image,null=True)
     about = models.TextField(null=True,blank=True)
-    gallery_image1 = models.ImageField(upload_to=cover_image)
-    gallery_image2 = models.ImageField(upload_to=cover_image)
-    gallery_image3 = models.ImageField(upload_to=cover_image)
+    gallery_image1 = models.ImageField(upload_to=cover_image,null=True)
+    gallery_image2 = models.ImageField(upload_to=cover_image,null=True)
+    gallery_image3 = models.ImageField(upload_to=cover_image,null=True)
 
 
     def __str__(self) -> str:
