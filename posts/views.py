@@ -38,7 +38,7 @@ class PostListAPI(generics.ListAPIView):
         except ValidationError as e:
             return Response({"message":str(e)})
         except Exception as e:
-            return Response({"message":str(e)})
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
 
 class PostImageListAPI(generics.ListAPIView):
     permission_classes = (AllowAny,)
@@ -46,20 +46,20 @@ class PostImageListAPI(generics.ListAPIView):
     
     def get_queryset(self):
         if "post_static_id" not in self.request.query_params:
-            raise ValidationError("POST ID NOT PROVIDED")
+            raise Exception("POST ID NOT PROVIDED")
         post = Post.objects.filter(static_id = self.request.query_params["post_static_id"])
         if post.exists():
             post = post.first()
             return PostImage.objects.filter(post=post)
         else:
-            raise ValidationError("INVALID POST ID GIVEN")
+            raise Exception("INVALID POST ID GIVEN")
 
 
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
-        except ValidationError as e:
-            return Response({"message":str(e)})
+        except Exception as e:
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
 
 
 class BookListAPI(generics.ListAPIView):
@@ -72,7 +72,7 @@ class BookListAPI(generics.ListAPIView):
         try:
             return super().list(request,*args, **kwargs)
         except Exception as e:
-            return Response({"message":str(e)})
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
 
 
 class VideoListAPI(generics.ListAPIView):
@@ -85,7 +85,7 @@ class VideoListAPI(generics.ListAPIView):
         try:
             return super().list(request,*args, **kwargs)
         except Exception as e:
-            return Response({"message":str(e)})
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
 
 class FrontPageAPI(generics.RetrieveAPIView):
 
@@ -98,5 +98,5 @@ class FrontPageAPI(generics.RetrieveAPIView):
         try:
             return super().retrieve(request, *args, **kwargs)
         except Exception as e:
-            return Response({"message":str(e)})
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
         
