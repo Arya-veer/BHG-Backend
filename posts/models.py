@@ -23,7 +23,7 @@ class College(models.Model):
         return f"{self.name}" 
 
 def category_image_path(instance,filename):
-    return f"{instance.college.name}/{instance.name}/banner.{filename.split('.')[-1]}"
+    return f"{instance.college.name}/{instance.title}/banner.{filename.split('.')[-1]}"
 
 class Post(models.Model):
 
@@ -38,7 +38,7 @@ class Post(models.Model):
         return self.title
 
 def post_image_path(instance,filename):
-    return f"{instance.post.category.college.name}/{instance.post.category.name}/{instance.post.title}/{filename}"
+    return f"{instance.post.college.name}/{instance.post.title}/{instance.post.title}/{filename}"
 
 
 class PostImage(models.Model):
