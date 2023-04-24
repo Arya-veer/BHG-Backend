@@ -120,3 +120,16 @@ class FrontPageAPI(generics.RetrieveAPIView):
         except Exception as e:
             return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
         
+class FooterAPI(generics.RetrieveAPIView):
+
+    permission_classes = (AllowAny,)
+    serializer_class = FooterSerializer
+    def get_object(self):
+        return Footer.objects.all().first()
+    
+    def retrieve(self, request, *args, **kwargs):
+        try:
+            return super().retrieve(request, *args, **kwargs)
+        except Exception as e:
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
+        

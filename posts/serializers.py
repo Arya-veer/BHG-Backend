@@ -44,3 +44,8 @@ class FrontPageSerializer(serializers.ModelSerializer):
         model = FrontPage
         fields = '__all__'
 
+class FooterSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Footer
+        fields = '__all__'

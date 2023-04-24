@@ -93,4 +93,14 @@ class FrontPage(models.Model):
 
 
     def __str__(self) -> str:
-        return self.cover_title
+        return "Front Page" + self.cover_title
+    
+class Footer(models.Model):
+
+    footer_title = models.TextField(null=True,blank=True)
+    footer_description = models.TextField(null=True,blank=True)
+    footer_copyright = models.TextField(null=True,blank=True)
+    footer_email = models.TextField(null=True,blank=True)
+
+    def __str__(self) -> str:
+        return "Footer" + self.footer_title

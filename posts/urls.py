@@ -9,4 +9,5 @@ urlpatterns = [
     path('books/<str:static_id>', BookDetailAPI.as_view()),
     path('videos/', VideoListAPI.as_view()),
     path('front/', FrontPageAPI.as_view()),
+    path('footer/', FooterAPI.as_view()),
 ]
