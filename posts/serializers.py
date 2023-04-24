@@ -14,7 +14,6 @@ class PostImagesSerializer(serializers.ModelSerializer):
         fields = ('photo','caption')
 
 class PostListSerializer(serializers.ModelSerializer):
-    images = PostImagesSerializer()
 
     class Meta:
         model = Post
