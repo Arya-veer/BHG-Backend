@@ -29,14 +29,12 @@ class PostListAPI(generics.ListAPIView):
             college = college.first()
             return Post.objects.filter(college=college)
         else:
-            raise ValidationError("INVALID COLLEGE ID GIVEN")
+            raise Exception("INVALID COLLEGE ID GIVEN")
 
 
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
-        except ValidationError as e:
-            return Response({"message":str(e)})
         except Exception as e:
             return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
 
@@ -49,8 +47,7 @@ class PostImageListAPI(generics.ListAPIView):
             raise Exception("POST ID NOT PROVIDED")
         post = Post.objects.filter(static_id = self.request.query_params["post_static_id"])
         if post.exists():
-            post = post.first()
-            return PostImage.objects.filter(post=post)
+            return PostImage.objects.filter(post=post.first())
         else:
             raise Exception("INVALID POST ID GIVEN")
 

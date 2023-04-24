@@ -42,9 +42,7 @@ def post_image_path(instance,filename):
 
 
 class PostImage(models.Model):
-    """
-    One post can have multiple images
-    """
+    """ One post can have multiple images """
     post = models.ForeignKey('Post',related_name = 'images',on_delete = models.CASCADE)
     photo = models.ImageField(upload_to = post_image_path)
     caption = models.TextField(blank=True,null=True)
@@ -98,4 +96,4 @@ class FrontPage(models.Model):
 
 
     def __str__(self) -> str:
-        return self.about
+        return self.cover_title
