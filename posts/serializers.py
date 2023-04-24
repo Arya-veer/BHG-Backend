@@ -17,14 +17,8 @@ class PostListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('static_id','title','text')
+        fields = "__all__"
 
-class PostImageListSerializer(PostListSerializer):
-    images = PostImagesSerializer(many = True)
-
-    class Meta:
-        model = Post
-        fields = PostListSerializer.Meta.fields + ('images',)
 
 class BookListSerializer(serializers.ModelSerializer):
 
