@@ -4,10 +4,14 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
 from rest_framework.views import APIView
 from rest_framework import status
+from rest_framework.renderers import JSONRenderer
+
+
 
 from .models import *
 from .serializers import *
 from .pagination import *
+from .renderer import *
 # Create your views here.
 
 class CollegeListAPI(generics.ListAPIView):
@@ -70,6 +74,22 @@ class BookListAPI(generics.ListAPIView):
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
+        except Exception as e:
+            return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
+
+
+class BookDetailAPI(APIView):
+    permission_classes = (AllowAny,)
+    renderer_classes = (BinaryFileRenderer, )
+
+    def get(self,request,*args, **kwargs):
+        try:
+            book = Book.objects.get(static_id = kwargs.get('static_id'))
+            with open(book.bookFile.path, 'rb') as bookFile:
+                return Response(
+                    bookFile.read(),
+                    headers={'Content-Disposition': f'attachment; filename="{book.title}.pdf"'},
+                    content_type='application/pdf')
         except Exception as e:
             return Response({"message":str(e)},status=status.HTTP_400_BAD_REQUEST)
 

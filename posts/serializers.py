@@ -1,3 +1,6 @@
+from django.http import HttpResponse
+from wsgiref.util import FileWrapper
+from Library_backend.settings import MEDIA_ROOT
 from rest_framework import serializers
 from .models import *
 
@@ -24,7 +27,10 @@ class BookListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = "__all__"
+
+
+
 
 class VideoListSerializer(serializers.ModelSerializer):
 
