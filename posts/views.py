@@ -7,7 +7,7 @@ from rest_framework import status
 
 from .models import *
 from .serializers import *
-from .pagination import VideoPagination
+from .pagination import *
 # Create your views here.
 
 class CollegeListAPI(generics.ListAPIView):
@@ -65,6 +65,7 @@ class BookListAPI(generics.ListAPIView):
     permission_classes = (AllowAny,)
     serializer_class = BookListSerializer
     queryset = Book.objects.all()
+    pagination_class = BookPagination
 
     def list(self,request,*args, **kwargs):
         try:
