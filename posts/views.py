@@ -15,23 +15,6 @@ class CollegeListAPI(generics.ListAPIView):
     serializer_class = CollegeListSerializer
     queryset = College.objects.all()
 
-class CategoryListAPI(generics.ListAPIView):
-
-    permission_classes = (AllowAny,)
-    serializer_class = CategoryListSerializer
-    
-    def get_queryset(self):
-        if "college_static_id" not in self.request.query_params:
-            raise ValidationError("COLLEGE ID NOT PROVIDED")
-        college = College.objects.filter(static_id = self.request.query_params["college_static_id"])
-        if college.exists():
-            college = college.first()
-            category = Category.objects.filter(college=college)
-            category = category.exclude(name = "GoodImages")
-
-            return category
-        else:
-            raise ValidationError("INVALID COLLEGE ID GIVEN")
 
 class PostListAPI(generics.ListAPIView):
 
@@ -41,10 +24,10 @@ class PostListAPI(generics.ListAPIView):
     def get_queryset(self):
         if "category_static_id" not in self.request.query_params:
             raise ValidationError("CATEGORY ID NOT PROVIDED")
-        category = Category.objects.filter(static_id = self.request.query_params["category_static_id"])
-        if category.exists():
-            category = category.first()
-            return Post.objects.filter(category=category)
+        college = College.objects.filter(static_id = self.request.query_params["college_static_id"])
+        if college.exists():
+            college = college.first()
+            return Post.objects.filter(college=college)
         else:
             raise ValidationError("INVALID CATEGORY ID GIVEN")
 

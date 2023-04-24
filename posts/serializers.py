@@ -7,12 +7,6 @@ class CollegeListSerializer(serializers.ModelSerializer):
         model = College
         fields = "__all__"
 
-class CategoryListSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Category
-        fields = ("static_id","name","categ_img")
-
 class PostImagesSerializer(serializers.ModelSerializer):
 
     class Meta:

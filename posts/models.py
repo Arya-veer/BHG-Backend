@@ -24,18 +24,6 @@ class College(models.Model):
 
 def category_image_path(instance,filename):
     return f"{instance.college.name}/{instance.name}/banner.{filename.split('.')[-1]}"
-class Category(models.Model):
-
-    static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
-    name = models.CharField(max_length = 30)
-    college = models.ForeignKey("College",related_name = "categories",on_delete = models.CASCADE)
-    categ_img = models.ImageField(upload_to=category_image_path,null=True)
-
-    class Meta:
-        verbose_name_plural = "Categories"
-
-    def __str__(self) -> str:
-        return f"{self.college.name} - {self.name}"
 
 
 class Post(models.Model):
@@ -44,7 +32,7 @@ class Post(models.Model):
     title = models.CharField(max_length = 40,blank = True)
     text = models.TextField(blank = True)
     uploaded_on = models.DateTimeField(default = timezone.now)
-    category = models.ForeignKey("Category",related_name = 'posts',on_delete = models.CASCADE)
+    college = models.ForeignKey("College",related_name = 'posts',on_delete = models.CASCADE)
 
     def __str__(self) -> str:
         return self.title
