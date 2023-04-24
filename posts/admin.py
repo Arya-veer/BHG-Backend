@@ -5,6 +5,7 @@ admin.site.register(College)
 admin.site.register(Book)
 admin.site.register(Video)
 admin.site.register(FrontPage)
+admin.site.register(Footer)
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
