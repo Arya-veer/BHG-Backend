@@ -22,20 +22,22 @@ class PostListAPI(generics.ListAPIView):
     serializer_class = PostListSerializer
     
     def get_queryset(self):
-        if "category_static_id" not in self.request.query_params:
-            raise ValidationError("CATEGORY ID NOT PROVIDED")
+        if "college_static_id" not in self.request.query_params:
+            raise Exception("COLLEGE ID NOT PROVIDED")
         college = College.objects.filter(static_id = self.request.query_params["college_static_id"])
         if college.exists():
             college = college.first()
             return Post.objects.filter(college=college)
         else:
-            raise ValidationError("INVALID CATEGORY ID GIVEN")
+            raise ValidationError("INVALID COLLEGE ID GIVEN")
 
 
     def list(self,request,*args, **kwargs):
         try:
             return super().list(request,*args, **kwargs)
         except ValidationError as e:
+            return Response({"message":str(e)})
+        except Exception as e:
             return Response({"message":str(e)})
 
 class PostImageListAPI(generics.ListAPIView):
