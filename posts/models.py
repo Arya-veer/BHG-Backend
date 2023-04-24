@@ -14,9 +14,6 @@ class College(models.Model):
     static_id = models.UUIDField(default = uuid4,unique = True)
     name = models.CharField("Name of the college",max_length = 50)
     title = models.CharField("Title of the college",max_length = 50,blank=True)
-    description = models.TextField(blank=True)
-    col_img = models.ImageField(upload_to=college_image_path,null=True)
-    col_img2 = models.ImageField(upload_to=college_image_path_2,null=True)
 
 
     def __str__(self) -> str:
