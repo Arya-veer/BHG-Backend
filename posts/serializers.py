@@ -3,6 +3,7 @@ from wsgiref.util import FileWrapper
 from Library_backend.settings import MEDIA_ROOT
 from rest_framework import serializers
 from .models import *
+import PyPDF2
 
 class CollegeListSerializer(serializers.ModelSerializer):
 
@@ -25,10 +26,15 @@ class PostListSerializer(serializers.ModelSerializer):
 
 class BookListSerializer(serializers.ModelSerializer):
 
+    pages = serializers.SerializerMethodField()
     class Meta:
         model = Book
-        fields = "__all__"
+        fields = ("static_id","title","author","description","bookFile","book_cover","pages")
 
+    def get_pages(self,obj):
+        file = open(obj.bookFile.path,'rb')
+        pdfReader = PyPDF2.PdfReader(file)
+        return len(pdfReader.pages)
 
 
 

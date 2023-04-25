@@ -2,4 +2,4 @@ django
 djangorestframework
 pillow
 django-cors-headers
-drf-pdf
+PyPDF2
