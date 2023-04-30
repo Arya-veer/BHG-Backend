@@ -73,6 +73,7 @@ class Book(models.Model):
             bp,created = BookPage.objects.get_or_create(pageNumber = i,book = self)
             if created:
                 # image = pages[i].save(f"{self.title} {i+1}.jpg","JPEG")
+                pages[i].close()
                 bp.bookImage = pages[i]
                 bp.save()
 
