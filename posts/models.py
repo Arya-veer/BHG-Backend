@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from uuid import uuid4
+from pdf2image import convert_from_path
 
 # Create your models here.
 def college_image_path(instance,filename):
@@ -64,6 +65,26 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def save(self,*args, **kwargs):
+        super().save(*args, **kwargs)
+        pages = convert_from_path(self.bookFile.path)
+        for i in range(len(pages)):
+            bp,created = BookPage.objects.get_or_create(pageNumber = i,book = self)
+            if created:
+                image = pages[i].save(f"{self.title} {i+1}.jpg","JPEG")
+                bp.bookImage = image
+                bp.save()
+
+
+def book_pages(instance,filename):
+    return f"{instance.book.title}/{filename}"
+
+class BookPage(models.Model):
+
+    pageNumber = models.PositiveIntegerField(null=True)
+    book = models.ForeignKey(Book,related_name="pages",on_delete=models.CASCADE)
+    bookImage = models.ImageField(upload_to=book_pages)
 
 class Video(models.Model):
 
