@@ -3,6 +3,7 @@ from .models import *
 # Register your models here.
 admin.site.register(College)
 admin.site.register(Book)
+admin.site.register(BookPage)
 admin.site.register(Video)
 admin.site.register(FrontPage)
 admin.site.register(Footer)

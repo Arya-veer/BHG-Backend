@@ -86,6 +86,9 @@ class BookPage(models.Model):
     book = models.ForeignKey(Book,related_name="pages",on_delete=models.CASCADE)
     bookImage = models.ImageField(upload_to=book_pages)
 
+    def __str__(self) -> str:
+        return f"Page Number {self.pageNumber} of {self.book.title}"
+
 class Video(models.Model):
 
     static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
