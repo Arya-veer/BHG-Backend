@@ -72,13 +72,13 @@ class Book(models.Model):
         for i in range(len(pages)):
             bp,created = BookPage.objects.get_or_create(pageNumber = i,book = self)
             if created:
-                image = pages[i].save(f"{self.title} {i+1}.jpg","JPEG")
-                bp.bookImage = image
+                # image = pages[i].save(f"{self.title} {i+1}.jpg","JPEG")
+                bp.bookImage = pages[i]
                 bp.save()
 
 
 def book_pages(instance,filename):
-    return f"{instance.book.title}/{filename}"
+    return f"{instance.book.title}/{filename}.jpg"
 
 class BookPage(models.Model):
 
