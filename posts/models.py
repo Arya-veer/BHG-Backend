@@ -68,27 +68,12 @@ class Book(models.Model):
     
     def save(self,*args, **kwargs):
         super().save(*args, **kwargs)
-        pages = convert_from_path(self.bookFile.path)
-        for i in range(len(pages)):
-            bp,created = BookPage.objects.get_or_create(pageNumber = i,book = self)
-            if created:
-                # image = pages[i].save(f"{self.title} {i+1}.jpg","JPEG")
-                pages[i].close()
-                bp.bookImage = pages[i]
-                bp.save()
 
 
 def book_pages(instance,filename):
     return f"{instance.book.title}/{filename}.jpg"
 
-class BookPage(models.Model):
 
-    pageNumber = models.PositiveIntegerField(null=True)
-    book = models.ForeignKey(Book,related_name="pages",on_delete=models.CASCADE)
-    bookImage = models.ImageField(upload_to=book_pages)
-
-    def __str__(self) -> str:
-        return f"Page Number {self.pageNumber} of {self.book.title}"
 
 class Video(models.Model):
 
