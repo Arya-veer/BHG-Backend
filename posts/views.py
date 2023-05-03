@@ -98,8 +98,11 @@ class VideoListAPI(generics.ListAPIView):
 
     permission_classes = (AllowAny,)
     serializer_class = VideoListSerializer
-    queryset = Video.objects.all()
     pagination_class = VideoPagination
+
+    def get_queryset(self):
+        college = College.objects.get(static_id = self.request.query_params.get("college_static_id"))
+        return Video.objects.filter(college = college)
 
     def list(self,request,*args, **kwargs):
         try:

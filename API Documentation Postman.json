@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "15e95be0-2aad-4ca5-9bbc-f7567806c774",
+		"name": "Birla Heritage Gallery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16611152"
+	},
+	"item": [
+		{
+			"name": "Front Page API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/front",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"front"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Front Page API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/front",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"front"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 11:01:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2153"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"cover_title\": \"fjdlsafldsanfldsn;f\",\n        \"cover_desc\": \"fldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnffldskanfldskanflsdnavl;fndsakjvlfnldsnfkldsanf;lsadnf\",\n        \"cover_image\": \"http://bhg.bits-pilani.ac.in/backend-media/cover_image/filename\",\n        \"about\": \"vmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsanvmdfslaknvgjsan\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "College List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/colleges/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"colleges",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "College List API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/colleges/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"colleges",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 11:12:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "255"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"static_id\": \"644b3d21-563e-49db-9c5d-51c151f9e586\",\n        \"name\": \"PILANI\",\n        \"title\": \"\",\n        \"description\": \"\",\n        \"col_img\": \"http://bhg.bits-pilani.ac.in/backend-media/PILANI/banner.jpeg\",\n        \"col_img2\": \"http://bhg.bits-pilani.ac.in/backend-media/PILANI/banner_2.jpg\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Video List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/videos?page=2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Video List API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/videos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 11:13:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2053"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"static_id\": \"bed85668-b5b4-493a-b3fd-f8f6f452ae32\",\n        \"title\": \"APOGEE 2004 INAUGURATION\",\n        \"link\": \"https://youtu.be/7e2QfgBPebo\"\n    },\n    {\n        \"id\": 2,\n        \"static_id\": \"b0fc227f-3b3b-43e0-a8de-1a0b4e4119a6\",\n        \"title\": \"APOGEE 2004 Mithali CD1\",\n        \"link\": \"https://youtu.be/nMY5-gDjyLg\"\n    },\n    {\n        \"id\": 3,\n        \"static_id\": \"4521a8d6-764c-4682-b0b8-dfb11a875843\",\n        \"title\": \"Ragamalika 24-4-18\",\n        \"link\": \"https://youtu.be/9cCHJhl5-4s\"\n    },\n    {\n        \"id\": 4,\n        \"static_id\": \"0258427a-629a-4b3f-a247-e13dff8d3186\",\n        \"title\": \"Ragamalika 26-4-18\",\n        \"link\": \"https://youtu.be/Bt3jgCJ9gM8\"\n    },\n    {\n        \"id\": 5,\n        \"static_id\": \"da402fba-2bcc-4dcf-b385-127085448140\",\n        \"title\": \"Ragamalika 28-4-18\",\n        \"link\": \"https://youtu.be/Tlgptjhg3rc\"\n    },\n    {\n        \"id\": 6,\n        \"static_id\": \"7469df46-32d7-477b-a020-2608a2a92c2e\",\n        \"title\": \"APOGEE 2004 Mithali CD2\",\n        \"link\": \"https://youtu.be/sem4uT0YJLg\"\n    },\n    {\n        \"id\": 7,\n        \"static_id\": \"5f8b0486-956b-42f2-a90b-a548e072a4d7\",\n        \"title\": \"captial night 1\",\n        \"link\": \"https://youtu.be/uo32-LiDJP8\"\n    },\n    {\n        \"id\": 8,\n        \"static_id\": \"8535ca54-551f-415d-ada9-91499d7c0891\",\n        \"title\": \"capital night 2\",\n        \"link\": \"https://youtu.be/OXeF5BohQWk\"\n    },\n    {\n        \"id\": 9,\n        \"static_id\": \"b1a8780e-06fc-4e7c-b947-3cffd7f30bc4\",\n        \"title\": \"APOGEE 2007 Mithali\",\n        \"link\": \"https://youtu.be/Z4NOLqaDtiE\"\n    },\n    {\n        \"id\": 10,\n        \"static_id\": \"5cf575d1-ce45-49cf-bdec-b938eb777aa4\",\n        \"title\": \"capital night 3\",\n        \"link\": \"https://youtu.be/NfPtU14ONVM\"\n    },\n    {\n        \"id\": 11,\n        \"static_id\": \"d55cfd0a-8a87-480b-bf0c-45a6554c7994\",\n        \"title\": \"capital night 4\",\n        \"link\": \"https://youtu.be/NfPtU14ONVM\"\n    },\n    {\n        \"id\": 12,\n        \"static_id\": \"b2df0486-1a06-41fd-b6c5-c61da4f220f4\",\n        \"title\": \"Junoon NSS 15-9-18\",\n        \"link\": \"https://youtu.be/tmCx4y6VCQ0\"\n    },\n    {\n        \"id\": 13,\n        \"static_id\": \"4528dcfb-4a1a-429b-a306-5155cf08ab70\",\n        \"title\": \"capital night 5\",\n        \"link\": \"https://youtu.be/lb_P7hajrsI\"\n    },\n    {\n        \"id\": 14,\n        \"static_id\": \"99cc9e6f-236d-4b66-9e9d-ca37bf09eda8\",\n        \"title\": \"Junoon SAC Hall Prog 15-9-18\",\n        \"link\": \"https://youtu.be/V2jd7b-G2Lc\"\n    },\n    {\n        \"id\": 15,\n        \"static_id\": \"03cf97de-5dc5-46a8-bf51-276981d61bc4\",\n        \"title\": \"Holi Milan 3-3-18\",\n        \"link\": \"https://youtu.be/wqbdTAbLuNk\"\n    },\n    {\n        \"id\": 16,\n        \"static_id\": \"73c61bd9-3f0b-48c0-9b13-118969336cf3\",\n        \"title\": \"haryana night 6-9-19\",\n        \"link\": \"https://youtu.be/5W3V19XzIT8\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Book List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Book List API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Apr 2023 09:34:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "210"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"static_id\": \"83501161-7c1a-4789-bc52-f3b483de3626\",\n        \"title\": \"Dummy file pdf\",\n        \"description\": \"\",\n        \"bookFile\": \"http://bhg.bits-pilani.ac.in/backend-media/books/Dummy_file_pdf\",\n        \"author\": \"\",\n        \"book_cover\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/posts?college_static_id=644b3d21-563e-49db-9c5d-51c151f9e586",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "college_static_id",
+							"value": "644b3d21-563e-49db-9c5d-51c151f9e586"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post List API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts?college_static_id=644b3d21-563e-49db-9c5d-51c151f9e586",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "college_static_id",
+									"value": "644b3d21-563e-49db-9c5d-51c151f9e586"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Apr 2023 09:57:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4351"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"static_id\": \"f8e49793-7c7e-401e-a660-5d354b08d16c\",\n        \"title\": \"Photo Archive\",\n        \"text\": \"The young Ghanshyam Das Birla (1905)\",\n        \"uploaded_on\": \"2023-01-23T11:41:23+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 3,\n        \"static_id\": \"2ee8430a-10c5-4e23-ab80-6b290c04779a\",\n        \"title\": \"Prof. Mohan Sinha Mehta\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T10:57:58+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 4,\n        \"static_id\": \"28e45cf0-9af1-457f-a956-2cb318676764\",\n        \"title\": \"Pandit Jawaharlal Nehru\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:07:56+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 5,\n        \"static_id\": \"c0cc35d1-3285-43b1-9ff8-cd16c93c1169\",\n        \"title\": \"Smt. Indira Gandhi\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:08:14+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 6,\n        \"static_id\": \"5ab9d5bd-ad38-402d-a54c-e12211bc0f25\",\n        \"title\": \"Sardar Vallabhbhai Patel\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:08:25+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 7,\n        \"static_id\": \"997ccde2-a178-44e7-8221-e2b99ea15778\",\n        \"title\": \"Shri GD Birla\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:09:57+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 8,\n        \"static_id\": \"f336b151-ae66-4c41-83df-46eeb2ae6240\",\n        \"title\": \"Dr. Rajendra Prasad\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:11:50+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 9,\n        \"static_id\": \"72f2ffa0-d825-453d-ae67-aea7e4f927eb\",\n        \"title\": \"Pilani Lecture halls and Classes\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:16:44+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 10,\n        \"static_id\": \"d042e618-3eef-4f6f-90c7-2039845c6686\",\n        \"title\": \"Heritage\",\n        \"text\": \"S.K. Birla and Ganga Prasad Birla visit BITS Pilani 12-04-2006\",\n        \"uploaded_on\": \"2022-12-10T11:18:13+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 11,\n        \"static_id\": \"102cf9fe-36f7-46f5-b940-4b3e797b6e3b\",\n        \"title\": \"Sports\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:19:23+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 12,\n        \"static_id\": \"51ce79dd-782f-4585-ae6b-d176c8bc3524\",\n        \"title\": \"Parade\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:21:47+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 13,\n        \"static_id\": \"f828bbb3-8ee8-44bf-b8a5-3af4b0a1ac5c\",\n        \"title\": \"Greetings by Various VIPs\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:22:08+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 14,\n        \"static_id\": \"879ffc64-0f74-444c-991b-f205c7ea29ae\",\n        \"title\": \"Hostels\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:23:10+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 15,\n        \"static_id\": \"560a1ead-c71c-4452-ba9d-318e286836bf\",\n        \"title\": \"Cafetaria\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:25:07+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 16,\n        \"static_id\": \"cc2758f4-5d66-444d-b220-ffdee36628ae\",\n        \"title\": \"Shiv Ganga\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:26:00+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 17,\n        \"static_id\": \"84980266-51b2-47b1-a3d0-75ab1dbf720f\",\n        \"title\": \"Students Performances and activities\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:27:03+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 18,\n        \"static_id\": \"cf608fc4-404c-4aba-b19f-94d90e6b570c\",\n        \"title\": \"Laboratiores and Museum\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:28:27+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 19,\n        \"static_id\": \"9a1a8502-3e70-4c4e-9cec-4bc86e027022\",\n        \"title\": \"Miscellenous\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:29:22+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 20,\n        \"static_id\": \"7cacc991-bea6-4a7f-b43b-8defd7c40165\",\n        \"title\": \"Music\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:33:44+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 21,\n        \"static_id\": \"77e79965-3e91-486c-86bf-c9cbebc5957c\",\n        \"title\": \"Convocation\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:37:33+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 22,\n        \"static_id\": \"7db430ec-e80f-42e5-92c9-31ee742b9c3d\",\n        \"title\": \"Play\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:37:48+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 23,\n        \"static_id\": \"5e6c98f2-2ac5-41ae-9339-4361db01d340\",\n        \"title\": \"Dance\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:43:31+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 24,\n        \"static_id\": \"b90290a7-389b-49e7-a737-665604f6af75\",\n        \"title\": \"Temple\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:45:54+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 25,\n        \"static_id\": \"b89b7dcb-df7c-49e9-b9db-7b02ca58234b\",\n        \"title\": \"Scientific Equipments\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:48:35+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 26,\n        \"static_id\": \"6b886753-66b2-43a4-a3c7-da5865fb71af\",\n        \"title\": \"Academic Building\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T11:57:01+05:30\",\n        \"image\": null,\n        \"college\": 1\n    },\n    {\n        \"id\": 27,\n        \"static_id\": \"265f8fac-8f8c-435f-a485-a00e4c141696\",\n        \"title\": \"GoodImages\",\n        \"text\": \"\",\n        \"uploaded_on\": \"2022-12-10T12:30:50+05:30\",\n        \"image\": null,\n        \"college\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Image List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/post_images?post_static_id=6b886753-66b2-43a4-a3c7-da5865fb71af",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"post_images"
+					],
+					"query": [
+						{
+							"key": "post_static_id",
+							"value": "6b886753-66b2-43a4-a3c7-da5865fb71af"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Image List API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/post_images?post_static_id=6b886753-66b2-43a4-a3c7-da5865fb71af",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post_images"
+							],
+							"query": [
+								{
+									"key": "post_static_id",
+									"value": "6b886753-66b2-43a4-a3c7-da5865fb71af"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Apr 2023 09:58:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "251"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"photo\": \"http://bhg.bits-pilani.ac.in/backend-media/PILANI/BITS%20Photo%20Archive/Photo%20Archive/P668.jpg\",\n        \"caption\": null\n    },\n    {\n        \"photo\": \"http://bhg.bits-pilani.ac.in/backend-media/PILANI/BITS%20Photo%20Archive/Photo%20Archive/P614.jpg\",\n        \"caption\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Book File API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.21.1.52:4000/books/e81d056e-53b7-4f72-bea3-f0d545d6711d",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"1",
+						"52"
+					],
+					"port": "4000",
+					"path": [
+						"books",
+						"e81d056e-53b7-4f72-bea3-f0d545d6711d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Footer API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/footer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"footer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Footer API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/footer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"footer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Apr 2023 20:47:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1187"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"footer_title\": \"About Heritage Gallery\",\n    \"footer_description\": \"In 1937, Ghanshyam Das Birla, who had started out at the Pathashala as a child, implemented the Wardha Scheme of Education in Pilani. During World War II, the Birla Education Trust responded to the government's request and established a centre at Pilani to train technicians for the Royal Indian Navy. In 1943, the primary school was converted into a civilian naval centre, which eventually evolved into the Birla Engineering College in 1946.\\r\\n\\r\\nThe college started offering degree and post-graduate courses in Mathematics, Physics, Chemistry, Zoology, and Botany, and facilities were provided for advanced research leading to doctorates in these subjects. The first batch of Mechanical and Electrical engineering students passed their Final B.E. degree examinations in 1950. In 1952, Birla College was bifurcated into two independent colleges: Birla Institute of Technology & Science (BITS) and Birla College of Science. BITS Pilani has since become one of the premier engineering institutes in India.\",\n    \"footer_copyright\": \"2023 BITS-Library, BITS-Pilani, India\",\n    \"footer_email\": \"library@pilani.bits-pilani.ac.in\"\n}"
+				}
+			]
+		}
+	]
+}

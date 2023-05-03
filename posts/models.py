@@ -78,6 +78,7 @@ def book_pages(instance,filename):
 class Video(models.Model):
 
     static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
+    college = models.ForeignKey("College",related_name = 'videos',on_delete = models.CASCADE)
     title = models.CharField(max_length = 40,blank = True)
     link = models.URLField(max_length = 200)
 
