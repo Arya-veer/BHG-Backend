@@ -43,7 +43,7 @@ class PostImage(models.Model):
     """ One post can have multiple images """
     post = models.ForeignKey('Post',related_name = 'images',on_delete = models.CASCADE)
     photo = models.ImageField(upload_to = post_image_path)
-    caption = models.TextField(blank=True,null=True)
+    caption = models.CharField(max_length=100,blank=True,null=True)
 
     def __str__(self) -> str:
         return f"{self.post}"
@@ -57,7 +57,7 @@ def book_cover(instance,filename):
 class Book(models.Model):
 
     static_id = models.UUIDField(default = uuid4,editable = True,unique = True)
-    title = models.CharField(max_length = 40,blank = True)
+    title = models.CharField(max_length = 100,blank = True)
     description = models.TextField(blank=True,null=True)
     bookFile = models.FileField(upload_to=book_path)
     author = models.TextField(null=True,blank=True)
