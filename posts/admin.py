@@ -4,11 +4,6 @@ from .models import *
 admin.site.register(FrontPage)
 admin.site.register(Footer)
 
-@admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
-    list_display = ('title','college')
-    list_filter = ('college',)
-    search_fields = ('title','text')
 
 @admin.register(PostImage)
 class PostImageAdmin(admin.ModelAdmin):
@@ -19,6 +14,15 @@ class PostImageAdmin(admin.ModelAdmin):
     def college(self,obj):
         return obj.post.college 
 
+class PostImageInLine(admin.TabularInline):
+    model = PostImage
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title','college')
+    list_filter = ('college',)
+    search_fields = ('title','text')
+    inlines = [PostImageInLine,]
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('title','college')
