@@ -33,6 +33,9 @@ ALLOWED_HOSTS = ['*']
 # ]
 CORS_ORIGIN_ALLOW_ALL = True
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://library.bits-pilani.ac.in",
+]
 # Application definition
 
 INSTALLED_APPS = [
